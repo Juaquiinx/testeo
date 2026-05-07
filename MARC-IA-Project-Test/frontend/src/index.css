@@ -1,0 +1,87 @@
+@import "tailwindcss";
+
+@theme {
+  /* PUCV Institutional Colors */
+  --color-pucv-navy: #1B2A4A;
+  --color-pucv-navy-light: #243660;
+  --color-pucv-blue: #2D5FA0;
+  --color-pucv-gold: #C9A84C;
+  --color-pucv-gold-light: #E8C95A;
+
+  /* MARC-IA Brand Colors */
+  --color-marc-primary: #3B82F6;
+  --color-marc-primary-dark: #2563EB;
+  --color-marc-accent: #8B5CF6;
+  --color-marc-accent-light: #A78BFA;
+  --color-marc-success: #10B981;
+  --color-marc-surface: #0F172A;
+  --color-marc-surface-light: #1E293B;
+  --color-marc-surface-card: #1E293B;
+  --color-marc-text: #F8FAFC;
+  --color-marc-text-muted: #94A3B8;
+  --color-marc-border: #334155;
+
+  /* Font */
+  --font-sans: 'Inter', system-ui, -apple-system, sans-serif;
+}
+
+/* Smooth scroll */
+html {
+  scroll-behavior: smooth;
+}
+
+/* Global body */
+body {
+  margin: 0;
+  padding: 0;
+  font-family: var(--font-sans);
+  background-color: var(--color-marc-surface);
+  color: var(--color-marc-text);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--color-marc-surface);
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--color-marc-border);
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--color-marc-text-muted);
+}
+
+/* Animations */
+@keyframes float {
+  0%, 100% { transform: translateY(0px); }
+  50% { transform: translateY(-20px); }
+}
+
+@keyframes pulse-glow {
+  0%, 100% { box-shadow: 0 0 20px rgba(59, 130, 246, 0.3); }
+  50% { box-shadow: 0 0 40px rgba(59, 130, 246, 0.6); }
+}
+
+@keyframes slide-up {
+  from { opacity: 0; transform: translateY(30px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes fade-in {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+@keyframes gradient-shift {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
